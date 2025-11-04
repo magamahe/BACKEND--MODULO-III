@@ -5,14 +5,14 @@ interface Usuario{
 }
 
 class UsuarioConcreto implements Usuario{
-    nombre: string;
+   /*  nombre: string;
     edad?: number;
-    readonly id: number;
+    readonly id: number; */ //NO hace falta declararlas de nuevo
 
-    constructor(nombre: string, id: number, edad?: number) {
-        this.nombre = nombre;
+    constructor(public nombre: string, public id: number, public edad?: number) {
+       /*  this.nombre = nombre;
         this.id = id;
-        this.edad = edad;
+        this.edad = edad; */ //NO hace falta asignarlas de nuevo
     }
 
     mostrarInfo(): void {
