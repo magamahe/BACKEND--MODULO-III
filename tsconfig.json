@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./",
-    "strict": true,
-    "esModuleInterop": true,
-    "declaration": true,       // genera .d.ts
-    "sourceMap": true          // genera .js.map y .d.ts.map
+    "target": "ES2021",            // Le dice a TS que genere JavaScript compatible con ES2021 (incluye Promise.any(), nullish coalescing, etc).
+    "lib": ["ES2021", "DOM"],      // Bibliotecas tipo ambient: usa las definiciones de ES2021 + APIs del DOM (para navegadores).
+    "module": "commonjs",          // Sistema de módulos: usa CommonJS (require / exports), útil para Node.
+    "outDir": "./dist",            // Carpeta donde TS va a poner los archivos compilados (.js) y los mapas de fuente (.js.map).
+    "rootDir": "./",               // Carpeta raíz de tus fuentes TypeScript. Aquí TS va a asumir que tus archivos .ts están dentro de esta ruta.
+    "strict": true,                 // Activa todas las comprobaciones estrictas de TS (noImplicitAny, strictNullChecks, etc).
+    "esModuleInterop": true,       // Permite interoperar entre módulos CommonJS y módulos ES: habilita `import x from "y"` para paquetes CJS.
+    "declaration": true,            // Genera archivos de definición .d.ts junto con tus .js compilados. Muy útil si vas a distribuir tu librería.
+    "sourceMap": true               // Genera mapas de origen (.js.map) para que, cuando depures, puedas ver el código original TS en el debugger.
   },
-  "include": ["clase_*/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["clase_*/**/*.ts"],   // Le dice a TS que incluya todos los archivos .ts dentro de carpetas que empiezan con "clase_" y sus subcarpetas.
+  "exclude": ["node_modules"]       // No compila nada dentro de node_modules (no necesitas tipar cada dependencia en tu build).
 }
+
