@@ -1,0 +1,62 @@
+[
+  {
+    "id": 3,
+    "name": "Charlie",
+    "email": "charlie@yahoo.com",
+    "age": 35
+  },
+  {
+    "id": 4,
+    "name": "Juan David",
+    "email": "david@gmail.com",
+    "age": 40
+  },
+  {
+    "id": 5,
+    "name": "Eve",
+    "email": "eve@example.com",
+    "age": 45
+  },
+  {
+    "name": "Ana Torres",
+    "email": "ana@gmail.com",
+    "age": 25,
+    "id": 6
+  },
+  {
+    "name": "Luis Perez",
+    "email": "luis@gmail.com",
+    "age": 30,
+    "id": 7
+  },
+  {
+    "name": "Carla Díaz",
+    "email": "carla@yahoo.com",
+    "age": 28,
+    "id": 8
+  },
+  {
+    "name": "Viejo",
+    "email": "viejo@gaby.com",
+    "age": 135,
+    "id": 9
+  },
+  {
+    "name": "joven",
+    "email": "joven@gaby.com",
+    "age": -1,
+    "id": 10
+  },
+  {
+    "name": "Viejo",
+    "email": "viejo@gaby.com",
+    "age": 15,
+    "id": 11
+  },
+  {
+    "name": "joven",
+    "email": "joven@gaby.com",
+    "age": 45,
+    "id": 12
+  }
+]
