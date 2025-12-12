@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "El Principito",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": "Fábula",
+    "year": 1943,
+    "publisher": "Reynal & Hitchcock",
+    "pages": 96,
+    "language": "Francés",
+    "isbn": "978-0156012195",
+    "available": true
+  },
+  {
+    "id": 2,
+    "title": "Rayuela",
+    "author": "Julio Cortázar",
+    "genre": "Ficción",
+    "year": 1963,
+    "publisher": "Editorial Sudamericana",
+    "pages": 600,
+    "language": "Español",
+    "isbn": "978-9871138011",
+    "available": false
+  },
+  {
+    "id": 3,
+    "title": "Las alumnas probando",
+    "author": "AlumnasADA",
+    "genre": "Educativo",
+    "year": 2024,
+    "publisher": "Ada Editorial",
+    "pages": 250,
+    "language": "Español",
+    "isbn": "978-0000000003",
+    "available": true
+  },
+  {
+    "id": 5,
+    "title": "El mejor BACK de ADA",
+    "author": "Gabriela Martinez",
+    "genre": "Terror",
+    "year": 2025,
+    "publisher": "Editorial ADA",
+    "pages": 1000,
+    "language": "Español",
+    "isbn": "999-9871138011",
+    "available": false
+  },
+  {
+    "id": 6,
+    "title": "Mi primer programita de BACK",
+    "author": "Gabriela Martinez",
+    "genre": "Comedia",
+    "year": 2025,
+    "publisher": "Editorial ADA",
+    "pages": 1000,
+    "language": "Español",
+    "isbn": "999-9871138011",
+    "available": false
+  },
+  {
+    "id": 7,
+    "title": "Ultimas pruebas de BACK",
+    "author": "AlumnasADA",
+    "genre": "Aprendiz",
+    "year": 2025,
+    "publisher": "Ada Editorial",
+    "pages": 250,
+    "language": "Español",
+    "isbn": "978-0000000003",
+    "available": false
+  },
+  {
+    "id": 8,
+    "title": "Ultimas pruebas de BACK",
+    "author": "AlumnasADA",
+    "genre": "Aprendiz",
+    "year": 2025,
+    "publisher": "Ada Editorial",
+    "pages": 250,
+    "language": "Español",
+    "isbn": "978-0000000003",
+    "available": false
+  }
+]
