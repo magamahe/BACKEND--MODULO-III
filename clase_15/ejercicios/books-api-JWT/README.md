@@ -14,6 +14,7 @@
   - [📌 Descripción](#-descripción)
   - [🧰 Tecnologías utilizadas](#-tecnologías-utilizadas)
   - [📁 Estructura del proyecto](#-estructura-del-proyecto)
+  - [🧩 Decisión de arquitectura (sin carpeta `models`)](#-decisión-de-arquitectura-sin-carpeta-models)
   - [🔧 Instalación y ejecución](#-instalación-y-ejecución)
     - [1️⃣ Clonar repositorio](#1️⃣-clonar-repositorio)
     - [2️⃣ Instalar dependencias](#2️⃣-instalar-dependencias)
@@ -57,18 +58,11 @@ GET http://localhost:3000/author/login
 
 Este endpoint devuelve un JWT que deberá enviarse en todas las solicitudes protegidas.
 
+<a href="#-índice">⬆️ Volver al índice</a>
+
 ---
 
 ## 🧰 Tecnologías utilizadas
-
-🟩 Node.js + Express  
-🔷 TypeScript  
-🌐 CORS  
-🔐 JSON Web Token (JWT)  
-📁 File System (books.json)  
-🧩 Middlewares personalizados  
-
----
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="22"/> **Node.js + Express**  
 
@@ -82,6 +76,7 @@ Este endpoint devuelve un JWT que deberá enviarse en todas las solicitudes prot
 
 <img src="https://cdn-icons-png.flaticon.com/512/906/906341.png" width="22"/> **Middlewares personalizados**
 
+<a href="#-índice">⬆️ Volver al índice</a>
 
 --- 
 ## 📁 Estructura del proyecto
@@ -106,6 +101,29 @@ Este endpoint devuelve un JWT que deberá enviarse en todas las solicitudes prot
     ├── package.json
     ├── tsconfig.json
     └── README.md
+
+<a href="#-índice">⬆️ Volver al índice</a>
+
+-----------------------------------------------------------------------
+
+## 🧩 Decisión de arquitectura (sin carpeta `models`)
+
+En este proyecto **no se utiliza la carpeta `models`** ya que la API trabaja con una base de datos local en formato **JSON** utilizando **File System (fs)**.
+
+La estructura y tipado de los datos se define en la carpeta:
+
+📂 `types/`
+
+```ts
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  year: number;
+  // ...
+}
+```
+<a href="#-índice">⬆️ Volver al índice</a>
 
 ---
 
@@ -136,6 +154,7 @@ Servidor en:
 ```
 http://localhost:3000
 ```
+<a href="#-índice">⬆️ Volver al índice</a>
 
 ---
 
@@ -165,6 +184,8 @@ El endpoint POST verifica que **título + autor** no exista ya en la base.
 - Logger → muestra cada request  
 - Auth → verifica JWT  
 - Handler → errores globales  
+
+<a href="#-índice">⬆️ Volver al índice</a>
 
 ---
 
@@ -201,6 +222,7 @@ Authorization: Bearer {TOKEN}
   "available": true
 }
 ```
+<a href="#-índice">⬆️ Volver al índice</a>
 
 ---
 
@@ -217,6 +239,8 @@ Si es inválido:
 401 Unauthorized
 ```
 
+<a href="#-índice">⬆️ Volver al índice</a>
+
 ---
 
 ## 🛑 Manejo de errores  
@@ -224,6 +248,8 @@ Middleware global que captura excepciones y retorna:
 ```json
 { "error": "Error interno del servidor" }
 ```
+
+<a href="#-índice">⬆️ Volver al índice</a>
 
 ---
 

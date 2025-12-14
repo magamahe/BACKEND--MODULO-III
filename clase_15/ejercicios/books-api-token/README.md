@@ -16,6 +16,7 @@
   - [📌 Descripción](#-descripción)
   - [🧰 Tecnologías utilizadas](#-tecnologías-utilizadas)
   - [📁 Estructura del proyecto](#-estructura-del-proyecto)
+  - [🧩 Decisión de arquitectura (sin carpeta `models`)](#-decisión-de-arquitectura-sin-carpeta-models)
   - [🔧 Instalación y ejecución](#-instalación-y-ejecución)
     - [1️⃣ Clonar el repositorio](#1️⃣-clonar-el-repositorio)
     - [2️⃣ Instalar dependencias](#2️⃣-instalar-dependencias)
@@ -90,13 +91,36 @@ Esta versión de la API utiliza **autenticación por Token simple**, enviado med
     │   │   └── book.ts
     │   ├── 📂utils/
     │   │   └── db.ts
-    │   ├── 📂dabase/
+    │   ├── 📂database/
     │   │   └── books.json
     │   └── index.ts
     ├── .env
     ├── package.json
     ├── tsconfig.json
     └── README.md
+
+<a href="#-índice">⬆️ Volver al índice</a>
+
+
+-----------------------------------------------------------------------
+
+## 🧩 Decisión de arquitectura (sin carpeta `models`)
+
+En este proyecto **no se utiliza la carpeta `models`** ya que la API trabaja con una base de datos local en formato **JSON** utilizando **File System (fs)**.
+
+La estructura y tipado de los datos se define en la carpeta:
+
+📂 `types/`
+
+```ts
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  year: number;
+  // ...
+}
+```
 
 <a href="#-índice">⬆️ Volver al índice</a>
 
