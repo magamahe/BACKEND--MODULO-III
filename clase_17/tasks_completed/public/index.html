@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas Pro | MongoDB</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+</head>
+
+<body class="bg-slate-50 dark:bg-[#0f172a] text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300 flex flex-col">
+
+    <!-- NAV -->
+    <nav class="sticky top-0 z-40 w-full bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i data-lucide="check-square" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight">
+                    Tasks<span class="text-blue-600">Pro</span>
+                </span>
+            </div>
+
+            <button id="themeToggle" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:ring-2 ring-blue-500 transition-all">
+                <i data-lucide="sun" class="hidden dark:block text-yellow-400"></i>
+                <i data-lucide="moon" class="block dark:hidden text-slate-600"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent italic">
+            Tareas Pendientes
+        </h1>
+        <p class="text-slate-500 dark:text-slate-400 text-lg max-w-xl mx-auto">
+            Gestioná tus tareas con persistencia real en MongoDB Atlas.
+        </p>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container mx-auto px-4 pb-20 max-w-4xl flex-grow">
+
+        <!-- FORM -->
+        <div class="bg-white dark:bg-slate-900 p-6 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 mb-10">
+            <div id="formStatus" class="mb-6">
+                <h2 id="formTitle" class="text-sm font-black uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+                    Nueva Tarea
+                </h2>
+            </div>
+
+            <form id="taskForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="hidden" id="taskId">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Título de la tarea"
+                    required
+                    class="w-full p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-blue-500 outline-none"
+                >
+
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Descripción (opcional)"
+                    class="w-full p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none focus:ring-2 focus:ring-blue-500 outline-none"
+                >
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="md:col-span-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-500/30 transition-all flex justify-center items-center gap-2 active:scale-95">
+                    <i data-lucide="save" class="w-5 h-5"></i>
+                    <span>Guardar Tarea</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="relative mb-8 group">
+            <i data-lucide="search" class="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar tarea..."
+                class="w-full pl-14 pr-6 py-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 outline-none focus:ring-2 focus:ring-blue-500 shadow-sm text-lg"
+            >
+        </div>
+
+        <!-- TASK LIST -->
+        <div id="taskList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-10 border-t border-slate-200 dark:border-slate-800 text-center">
+        <p class="text-slate-400 text-sm">
+            © 2025 TasksPro • Backend Node.js + MongoDB
+        </p>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="taskModal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-md flex items-center justify-center z-50 p-4">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-sm rounded-[2.5rem] p-10 relative border border-slate-200 dark:border-slate-700 shadow-2xl text-center">
+            <button onclick="closeModal()" class="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3"></div>
+
+    <script src="./js/script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
