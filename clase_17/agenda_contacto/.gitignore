@@ -1,0 +1,9 @@
+# Dependencias (pesan mucho y se descargan con npm install)
+node_modules/
+
+# Variables de entorno (CONTIENEN TUS CLAVES SECRETAS)
+.env
+
+# Archivos de sistema o logs
+npm-debug.log*
+.DS_Store
