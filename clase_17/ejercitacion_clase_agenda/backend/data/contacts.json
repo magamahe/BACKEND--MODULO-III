@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1766018105700",
+    "name": "Ana Garcia",
+    "email": "ana@example.com",
+    "phone": "12341268"
+  },
+  {
+    "id": "1766018156571",
+    "name": "Juan Perez",
+    "email": "juan@example.com",
+    "phone": "8634810364"
+  },
+  {
+    "id": "1766018360721",
+    "name": "Jose",
+    "email": "jose@example.com",
+    "phone": "812647395"
+  }
+]
