@@ -1,0 +1,7 @@
+mkdir -p backend/routes backend/data frontend
+touch backend/index.js
+touch backend/routes/tasks.js
+touch backend/data/tasks.json
+echo "[]" > backend/data/tasks.json
+touch frontend/index.html
+touch frontend/app.js
