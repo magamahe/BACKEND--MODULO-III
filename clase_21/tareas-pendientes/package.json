@@ -1,0 +1,26 @@
+{
+  "name": "tareas-pendientes",
+  "version": "1.0.0",
+  "description": "Mini proyecto CRUD de tareas pendientes con Node.js, Express y JSON",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "node backend/index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "crud",
+    "tasks",
+    "render"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}
+
